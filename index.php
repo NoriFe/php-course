@@ -1,11 +1,24 @@
-<?=
-// this is comment
+<?php
 /*
-multi line comment
+VARIABLE RULES:
+- All variables are prefixed with a dollar sign ($).
+- They must start with a letter or an underscore.
+- They cannot start with a number.
+- They can only contain letters, numbers, and underscores.
+- They are case sensitive. So, `$name` and `$Name` are two different variables.
 */
-"Hello World";
-echo '<br />';
-print "Hello World!";
+
+/*
+CONVENTIONS:
+- Underscores: $server_name
+- Camel Case: $serverName
+- Pascal Case: $ServerName
+- lowercase: $servername
+*/
+
+$title = 'Learn PHP From Scratch';
+$heading = 'Welcome To The Course';
+$body = 'In this course, you will learn the fundamentals of the PHP language';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +28,7 @@ print "Hello World!";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title><?= 'Learn PHP From Scratch '?></title>
+    <title><?= $title ?></title>
 </head>
 
 <body class="bg-gray-100">
@@ -26,8 +39,8 @@ print "Hello World!";
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold mb-4">Welcome To The Course</h2>
-            <p>In this course, you will learn the fundamentals of the PHP language</p>
+            <h2 class="text-2xl font-semibold mb-4"><?= $heading ?></h2>
+            <p><?= $body ?></p>
         </div>
     </div>
 </body>
