@@ -1,48 +1,42 @@
 <?php
-/*
-VARIABLE RULES:
-- All variables are prefixed with a dollar sign ($).
-- They must start with a letter or an underscore.
-- They cannot start with a number.
-- They can only contain letters, numbers, and underscores.
-- They are case sensitive. So, `$name` and `$Name` are two different variables.
-*/
+// String 
+$name = "Norbert";
+var_dump($name);
+echo "<br>";
 
-/*
-CONVENTIONS:
-- Underscores: $server_name
-- Camel Case: $serverName
-- Pascal Case: $ServerName
-- lowercase: $servername
-*/
+// Integer
+$age = 20;
+$age2 = "20";
+var_dump($age);
+echo "<br>";
+var_dump($age2);
+echo "<br>";
 
-$title = 'Learn PHP From Scratch';
-$heading = 'Welcome To The Course';
-$body = 'In this course, you will learn the fundamentals of the PHP language';
+// Float
+$height = 1.75;
+var_dump($height);
+echo "<br>";
+$height2 = 4;
+var_dump($height2);
+echo "<br>";
+// Boolean
+$male = true;
+var_dump($male);
+echo "<br>";
+// Array
+$fruits = ["Apple", "Banana", "Orange"];
+var_dump($fruits);
+echo "<br>";
+// Object
+$car = new stdClass();
+var_dump($car);
+echo "<br>";
+// NULL
+$bike = NULL;
+var_dump($bike);
+echo "<br>";
+// Resource
+$file = fopen("sample.txt", "r");
+var_dump($file);
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title><?= $title ?></title>
-</head>
-
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-semibold">Learn PHP From Scratch</h1>
-        </div>
-    </header>
-    <div class="container mx-auto p-4 mt-4">
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold mb-4"><?= $heading ?></h2>
-            <p><?= $body ?></p>
-        </div>
-    </div>
-</body>
-
-</html>
