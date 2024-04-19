@@ -1,42 +1,39 @@
 <?php
-// String 
-$name = "Norbert";
-var_dump($name);
-echo "<br>";
+$firstName = 'Norbert';
+$lastName = 'Learnowski';
 
-// Integer
-$age = 20;
-$age2 = "20";
-var_dump($age);
-echo "<br>";
-var_dump($age2);
-echo "<br>";
-
-// Float
-$height = 1.75;
-var_dump($height);
-echo "<br>";
-$height2 = 4;
-var_dump($height2);
-echo "<br>";
-// Boolean
-$male = true;
-var_dump($male);
-echo "<br>";
-// Array
-$fruits = ["Apple", "Banana", "Orange"];
-var_dump($fruits);
-echo "<br>";
-// Object
-$car = new stdClass();
-var_dump($car);
-echo "<br>";
-// NULL
-$bike = NULL;
-var_dump($bike);
-echo "<br>";
-// Resource
-$file = fopen("sample.txt", "r");
-var_dump($file);
+$fullName = $firstName . ' ' . $lastName;
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Learn PHP From Scratch</title>
+</head>
+
+<body class="bg-gray-100">
+  <header class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-semibold">Learn PHP From Scratch</h1>
+    </div>
+  </header>
+  <div class="container mx-auto p-4 mt-4">
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <!-- Output -->
+      <?= 'Hello, my name is ' . $fullName ?>
+      <br>
+      <?= 'Hello, my name is \'Norbert\'' ?>
+
+      <br>
+      <?= "Hello, my name is {$fullName}" ?>
+
+    </div>
+  </div>
+</body>
+
+</html>
