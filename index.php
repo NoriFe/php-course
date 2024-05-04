@@ -1,97 +1,61 @@
 <?php
 $output = null;
 
-$ids = [11, 23, 33, 42, 53, 641, 72, 84, 95, 101];
-$users = [ 'user2', 'user1', 'user3', 'user5', 'user4'];
+$cars = [
+  ['Toyota', 'Camry'],
+  ['Honda', 'Accord'],
+  ['Ford', 'Fusion'],
+  ['Chevrolet', 'Malibu'],
+  ['Nissan', 'Altima']
+];
 
-$output = count($ids) === count($users) ? 'The arrays have the same length' : 'The arrays do not have the same length';
+$output = $cars[0][1];
 
-// sort
-sort($ids);
-sort($users);
+$cars[] = ['BMW', 'M3']; // Add new element to the array
 
-//push
+$users = [
+['name' => 'nori', 'email' => 'nori@test.com', 'age' => 30,  'password' => '123456'],
+['name' => 'troli', 'email' => 'troli@test.com', 'age' => 40,  'password' => '123456'],
+['name' => 'boli', 'email' => 'boli@test.com', 'age' => 56,  'password' => '123456'],
 
-array_push($ids, 111);
-array_push($users, 'user6');
+];
 
-//pop removing last element
+$output = $users[0]['name']; // will print name of the first user
 
-array_pop($ids);
-array_pop($users);
+array_push($users, ['name' => 'moli', 'email' => 'moli@test.com', 'age' => 56,  'password' => '123456']); // Add new element to the array
 
-//array_shift removing first element
-
-array_shift($ids);
-array_shift($users);
-
-//array_unshift adding element at the beginning
-
-array_unshift($ids, 1);
-array_unshift($users, 'user0');
-
-//slice array 
-
-$ids = array_slice($ids, 0, 5); // 5 is the length of the array
-
-// splice array
-
-array_splice($users, 0, 1, 'new ID'); // 0 is the starting index, 1 is the number of elements to remove, 'new ID' is the element to add
-
-// sum of all elements in the array
-
-$output = 'sum of ids: ' . array_sum($ids);
-
-// explode 
-
-$tags = 'php,javascript,css,html';
-$tagsArray = explode(',', $tags);
-
-//var_dump($tagsArray);
-
-//implode 
-
-$output = implode(' - ', $tagsArray);
-
-
-
+array_pop($users); // Remove the last element from the array
+array_shift($users); // Remove the first element from the array
+unset($users[0]); // Remove the element from the array by index
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>PHP From Scratch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>PHP From Scratch</title>
 </head>
 
 <body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-semibold">PHP From Scratch</h1>
-        </div>
-    </header>
-    <div class="container mx-auto p-4 mt-4">
-        <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-            <!-- Output -->
-            <p class="text-xl"><?= $output ?></p>
-            <h2 class="text-xl font-semibold my-4">IDs array:</h2>
-            <p>
-                <pre>
-                    <?php print_r($ids); ?>
-                </pre>
-            </p>
-            <h2 class="text-xl font-semibold my-4">Users array:</h2>
-            <p>
-                <pre>
-                    <?php print_r($users); ?>
-                </pre>
-            </p>
-            </p>
-        </div>
+  <header class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-semibold">PHP From Scratch</h1>
     </div>
+  </header>
+  <div class="container mx-auto p-4 mt-4">
+    <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+      <!-- Output -->
+      <p class="text-xl"><?= $output ?></p>
+      <p>
+        <pre>
+          <?php print_r($users); ?>
+        </pre>
+      </p>
+    </div>
+  </div>
 </body>
 
 </html>
