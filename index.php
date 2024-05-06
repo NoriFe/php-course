@@ -1,5 +1,5 @@
 <?php
-$listings = [
+$listings =
   [
     'id' => 1,
     'title' => 'Software Engineer',
