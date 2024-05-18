@@ -1,52 +1,53 @@
 <?php
 
-$isLoggedIn = false;
-$name = 'John Doe';
+/*
+| Comparison Operators
+| Operator | Description              |
+| -------- | ------------------------ |
+| ==       | Equal to                 |
+| ===      | Identical to             |
+| !=       | Not equal to             |
+| <>       | Not equal to             |
+| !==      | Not identical to         |
+| <        | Less than                |
+| >        | Greater than             |
+| <=       | Less than or equal to    |
+| >=       | Greater than or equal to |
+*/
+
+$x = 10;
+$y = '10';
+
+// var_dump($x == $y); // Output: bool(true)
+// var_dump($x === $y); // Output: bool(false)
+// var_dump($x != $y); // Output: bool(false)
+// var_dump($x <> $y); // Output: bool(false)
+// var_dump($x !== $y); // Output: bool(true)
+// var_dump($x < $y); // Output: bool(false)
+// var_dump($x > $y); // Output: bool(false)
+// var_dump($x <= $y); // Output: bool(true)
+// var_dump($x >= $y); // Output: bool(true)
 
 
 
-?>
-<!DOCTYPE html>
-<html lang="en">
+/*
+| Logical Operators
+| Operator | Description            |
+| -------- | ---------------------- |
+| and      | True if both are true  |
+| &&       | True if both are true  |
+| or       | True if either is true |
+| ||       | True if either is true |
+| xor      | True if one is true    |
+| !        | True if it is not true |
+*/
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>PHP From Scratch</title>
-</head>
+$a = 10;
+$b = 20;
 
-<body class="bg-gray-100">
-  <header class="bg-blue-500 text-white p-4">
-    <div class="container mx-auto">
-      <h1 class="text-3xl font-semibold">PHP From Scratch</h1>
-    </div>
-  </header>
-  <div class="container mx-auto p-4 mt-4">
-    <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-      <!-- Output -->
-      <?php if ($isLoggedIn) : ?>
-        <?php if (isset($name)) : ?>
-          <h1 class="text-3xl">Welcome back, <?= $name ?></h1>
-        <?php else : ?>
-          <h1 class="text-3xl">Welcome to the maddness of coding</h1>
-        <?php endif; ?>
-      <?php else : ?>
-        <h1 class="text-3xl">You are not logged in</h1>
-      <?php endif; ?>
-
-      <?php if($isLoggedIn && $name) : ?>
-        <h1 class="text-3xl">Welcome back, <?= $name ?></h1>
-      <?php elseif($isLoggedIn) : ?>
-        <h1 class="text-3xl">Welcome to the maddness of coding</h1>
-      <?php else : ?>
-        <h1 class="text-3xl">You are not logged in</h1>
-      <?php endif; ?>
-
-         
-      
-    </div>
-  </div>
-</body>
-
-</html>
+var_dump($a == 10 and $b == 20); // Output: bool(true)
+var_dump($a == 10 && $b == 20); // Output: bool(true)
+var_dump($a == 10 or $b == 20); // Output: bool(true)
+var_dump($a == 10 || $b == 20); // Output: bool(true)
+var_dump($a == 10 xor $b == 20); // Output: bool(false)
+var_dump(!($a == 10 and $b == 20)); // Output: bool(false)
